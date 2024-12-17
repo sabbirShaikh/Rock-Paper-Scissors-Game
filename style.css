@@ -1,0 +1,184 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: linear-gradient(to right, #42a5f5, #66bb6a);
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    text-align: center;
+}
+
+/* Title Styling */
+h1 {
+    height: 7rem;
+    background-color: #110221;
+    color: azure;
+    text-align: center;
+    line-height: 7rem;
+    font-size: 3rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+/* Choice Buttons */
+.choice {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice:hover {
+    cursor: pointer;
+    opacity: 0.85;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Choice Images */
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Choices Container */
+.choices {
+    display: flex;
+    gap: 4rem;
+    margin-top: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Score Board Styling */
+.score-board {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.score {
+    font-size: 2.5rem;
+    color: #110221;
+    background: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.score:hover {
+    background-color: #66bb6a;
+}
+
+/* Message Container */
+.msg-container {
+    margin-top: 2rem;
+}
+
+#msg {
+    background-color: rgb(26, 8, 52);
+    color: #ffffff;
+    display: inline-block;
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease;
+}
+
+/* Keyframes for Fade-In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        line-height: 6rem;
+    }
+
+    .choice {
+        height: 150px;
+        width: 150px;
+    }
+
+    img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .choices {
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .score {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #msg {
+        font-size: 2.5rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 5rem;
+    }
+
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .choices {
+        gap: 1.5rem;
+    }
+
+    .score {
+        font-size: 1.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #msg {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+    }
+}
